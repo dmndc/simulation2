@@ -3,14 +3,14 @@ const { json } = require('body-parser')
 const session = require('express-session')
 const massive = require('massive')
 const cors = require ('cors')
-const config = require('./config.js')
+const config = require('./../config')
 
-const auth_controller = require('./controller/auth_controller')
-const prop_controller = require('./controller/prop_controller')
+const auth_controller = require('./controller/authCtrl');
+const prop_controller = require('./controller/propCtrl');
 
 const app= express();
 
-const port = 5432;
+const port = 3000;
 
 app.use( json() )
 
