@@ -37,9 +37,22 @@ class Login extends Component {
 
   render() {
     return (
+    <div>
       <div>
         <h1>HELLO WORLD!</h1>
       </div>
+       
+      <div class="centralContainer">
+
+        <div class = "logo"></div>
+        <div class = "userName"></div>
+        <div class = "password"></div>
+        <div class ="buttonLogin"></div>
+        <div class ="buttonRegister"></div>
+
+      </div> 
+    </div>
+      
     )
   }
 }
