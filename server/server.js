@@ -5,8 +5,8 @@ const massive = require('massive')
 const cors = require ('cors')
 const config = require('./../config')
 
-const auth_controller = require('./controller/authCtrl');
-const prop_controller = require('./controller/propCtrl');
+const authCtrl = require('./controller/authCtrl');
+const propCtrl = require('./controller/propCtrl');
 
 const app= express();
 
@@ -30,11 +30,15 @@ app.use( session({
 
 // Auth endpoints
 
+app.post('/api/auth/login', authCtrl.login);
+app.post('/api/auth/register', authCtrl.register);
+app.get('/api/auth/logout', authCtrl.logout);
 
 
 // Properties endpoints
+app.get('/api/properties', propCtrl.getProperties);
 
-
+// GET - /api/properties - Returns all properties associated with the logged in user.
 
 
 app.listen(port, () => {console.log(`We are live on port: ${port}`)})
