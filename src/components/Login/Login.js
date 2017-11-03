@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Login.css';
-import axios from 'axios'
+import axios from 'axios';
+import logo from '../../assets/auth_logo.png';
 
 // import { connect } from "react-redux";
 
@@ -38,15 +39,30 @@ class Login extends Component {
   render() {
     return (
     <div>
-      <div>
+      {/* <div>
         <h1>HELLO WORLD!</h1>
-      </div>
+      </div> */}
        
       <div class="centralContainer">
 
-        <div class = "logo"></div>
-        <div class = "userName"></div>
-        <div class = "password"></div>
+        <img src={ logo } class = "logo" alt="logo"/>
+
+        
+        {/* <div class = "userName"> */}
+        <label>
+           Username:
+        </label>
+          <input type="text" username="name" />
+        {/* </div> */}
+
+        {/* <div class = "password"> */}
+        <label>
+           Password:
+        </label>
+          <input type="text" username="name" />
+          
+        {/* </div> */}
+        
         <div class ="buttonLogin"></div>
         <div class ="buttonRegister"></div>
 
